@@ -1,0 +1,1 @@
+insert into usuario(id, nombre, apellidos, email, username, password, admin, premium, descuento) values (1, 'admin', 'admin', 'admin@gmail.com', 'admin', '{noop}admin', true, true, 0.25);
