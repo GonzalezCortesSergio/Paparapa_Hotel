@@ -23,12 +23,12 @@ public class Reserva {
 
     @ManyToOne
     @MapsId("usuario_id")
-    @JoinColumn(name = "usuario_id")
+    @JoinColumn(name = "usuario_id", foreignKey = @ForeignKey(name = "fk_reserva_usuario"))
     private Usuario usuario;
 
     @ManyToOne
     @MapsId("num_habitacion")
-    @JoinColumn(name = "num_habitacion")
+    @JoinColumn(name = "num_habitacion", foreignKey = @ForeignKey(name = "fk_reserva_habitacion"))
     private Habitacion habitacion;
 
     @DateTimeFormat(pattern = "dd-MM-yyyy")
