@@ -36,7 +36,6 @@ public class Usuario implements UserDetails {
 
     private boolean premium;
 
-    private double descuento;
 
     @OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
     @EqualsAndHashCode.Exclude

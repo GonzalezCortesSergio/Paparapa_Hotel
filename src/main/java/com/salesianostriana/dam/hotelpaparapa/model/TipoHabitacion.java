@@ -18,8 +18,5 @@ public class TipoHabitacion {
     @Column(unique = true)
     private String nombre;
 
-    @Lob
-    private String descripcion;
-
-    private double precio;
+    private double precioPorNoche;
 }

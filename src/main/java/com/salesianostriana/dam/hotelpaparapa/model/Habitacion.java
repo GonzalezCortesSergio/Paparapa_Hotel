@@ -19,6 +19,9 @@ public class Habitacion {
     @JoinColumn(foreignKey = @ForeignKey(name = "fk_habitacion_tipo_habitacion"))
     private TipoHabitacion tipo;
 
+    @Lob
+    private String descripcion;
+
     private int planta;
 
     private int numCamas;

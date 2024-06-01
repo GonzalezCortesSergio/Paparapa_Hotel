@@ -7,14 +7,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDate;
-import java.util.Optional;
 
 public interface RepositorioReserva extends JpaRepository<Reserva, ReservaPK> {
 
     @Query("""
             SELECT r
             FROM Reserva r
-            WHERE r.id = :idResera AND r.fechaLlegada = :fechaEntrada
+            WHERE r.habitacion.numHabitacion = :numHabitacion AND r.fechaLlegada = :fechaEntrada
             """)
-    Optional<Reserva> reservaFechaEntrada(@Param("fechaEntrada")LocalDate fechaEntrada, @Param("idReserva") long idReserva);
+    Reserva reservaFechaEntrada(@Param("fechaEntrada")LocalDate fechaEntrada, @Param("numHabitacion") long numHabitacion);
 }
